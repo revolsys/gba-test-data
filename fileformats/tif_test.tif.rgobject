@@ -1,0 +1,32 @@
+{
+  "j:type":"bufferedImage",
+  "type":"bufferedImage",
+  "boundingBox":"SRID=3005;BBOX(997952,452176 1016189,466388)",
+  "tiePoints":[
+    {
+      "sourceX":1914,
+      "sourceY":3240,
+      "target":"SRID=3005;POINT(1004808.601 463101.949)"
+    },
+    {
+      "sourceX":3905,
+      "sourceY":1059,
+      "target":"SRID=3005;POINT(1012025.996848152 456221.0029878868)"
+    },
+    {
+      "sourceX":1531,
+      "sourceY":2094,
+      "target":"SRID=3005;POINT(1003790.5321376967 459033.9147900939)"
+    },
+    {
+      "sourceX":2265,
+      "sourceY":3128,
+      "target":"SRID=3005;POINT(1004867.989 463007.249)"
+    },
+    {
+      "sourceX":1555,
+      "sourceY":2925,
+      "target":"SRID=3005;POINT(1004811.811 463098.739)"
+    }
+  ]
+}
