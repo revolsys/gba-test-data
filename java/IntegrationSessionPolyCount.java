@@ -15,8 +15,7 @@ public class IntegrationSessionPolyCount extends BatchUpdateDialog {
 
   public IntegrationSessionPolyCount() {
     super("Integration Session Poly Count");
-    newStatistics("Read", GbaTables.INTEGRATION_SESSION_POLY);
-    autoSize();
+    newStatistics(COUNTS, "Read", GbaTables.INTEGRATION_SESSION_POLY);
   }
 
   @Override
@@ -26,7 +25,7 @@ public class IntegrationSessionPolyCount extends BatchUpdateDialog {
     try (
       Reader<Record> roadReader = recordStore.getRecords(query)) {
       for (final Record record : roadReader) {
-        addStatistic("Read", GbaTables.INTEGRATION_SESSION_POLY);
+        addStatistic(COUNTS, "Read", GbaTables.INTEGRATION_SESSION_POLY);
       }
     }
     return true;
