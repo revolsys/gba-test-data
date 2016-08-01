@@ -25,7 +25,7 @@ public class IntegrationSessionPolyCount extends BatchUpdateDialog {
     try (
       Reader<Record> roadReader = recordStore.getRecords(query)) {
       for (final Record record : roadReader) {
-        addStatistic(COUNTS, "Read", GbaTables.INTEGRATION_SESSION_POLY);
+        addStatistic(COUNTS, GbaTables.INTEGRATION_SESSION_POLY, "Read");
       }
     }
     return true;
