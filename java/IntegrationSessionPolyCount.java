@@ -2,8 +2,8 @@ import ca.bc.gov.gba.model.GbaTables;
 import ca.bc.gov.gba.ui.BatchUpdateDialog;
 import ca.bc.gov.gba.ui.StatisticsDialog;
 
-import com.revolsys.io.Reader;
 import com.revolsys.record.Record;
+import com.revolsys.record.io.RecordReader;
 import com.revolsys.record.query.Query;
 import com.revolsys.record.schema.RecordStore;
 import com.revolsys.transaction.Transaction;
@@ -15,7 +15,7 @@ public class IntegrationSessionPolyCount extends BatchUpdateDialog {
 
   public IntegrationSessionPolyCount() {
     super("Integration Session Poly Count");
-    newStatistics(COUNTS, "Read", GbaTables.INTEGRATION_SESSION_POLY);
+    newLabelCount(COUNTS, "Read", GbaTables.INTEGRATION_SESSION_POLY);
   }
 
   @Override
@@ -23,9 +23,9 @@ public class IntegrationSessionPolyCount extends BatchUpdateDialog {
     final Query query = new Query(GbaTables.INTEGRATION_SESSION_POLY);
     final RecordStore recordStore = getRecordStore();
     try (
-      Reader<Record> roadReader = recordStore.getRecords(query)) {
+      RecordReader roadReader = recordStore.getRecords(query)) {
       for (final Record record : roadReader) {
-        addStatistic(COUNTS, GbaTables.INTEGRATION_SESSION_POLY, "Read");
+        addLabelCount(COUNTS, GbaTables.INTEGRATION_SESSION_POLY, "Read");
       }
     }
     return true;
